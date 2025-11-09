@@ -1,9 +1,11 @@
+/** biome-ignore-all lint/correctness/noUnknownProperty: DaisyUI plugin */
 @import "tailwindcss";
-@plugin "daisyui";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@plugin "daisyui" {
+  themes: night --default;
+}
+@plugin "daisyui/theme" {
+  name: "night";
+  default: true;
 }
 
 @theme inline {
@@ -11,17 +13,34 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-line-seed-sans-th: var(--font-line-seed-sans-th);
+  --font-lexend: var(--font-lexend);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: oklch(20.8% 0.042 265.755);
+    --foreground: oklch(70.4% 0.04 256.788);
+  }
+}
+
+@utility container {
+  @variant sm {
+    max-width: 640px;
+  }
+  @variant md {
+    max-width: 768px;
+  }
+  @variant lg {
+    max-width: 1024px;
+  }
+  @variant xl {
+    max-width: 1440px;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-lexend), var(--font-line-seed-sans-th);
 }

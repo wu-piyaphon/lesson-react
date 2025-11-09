@@ -1,19 +1,50 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "../globals.css";
+import { Lexend } from "next/font/google";
+import localFont from "next/font/local";
+
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
+import "../globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+// ----------------------------------------------------------------------
+
+const lineSeedTH = localFont({
+  variable: "--font-line-seed-sans-th",
+  src: [
+    {
+      path: "../../public/fonts/LINESeedSansTH_W_Th.woff2",
+      weight: "100",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/LINESeedSansTH_W_Rg.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/LINESeedSansTH_W_Bd.woff2",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/LINESeedSansTH_W_XBd.woff2",
+      weight: "800",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/LINESeedSansTH_W_He.woff2",
+      weight: "900",
+      style: "normal",
+    },
+  ],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const lexend = Lexend({
+  variable: "--font-lexend",
   subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
@@ -42,10 +73,8 @@ export default async function RootLayout({ children, params }: Props) {
   setRequestLocale(locale);
 
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="en" data-theme="night" data-theme-mode="dark">
+      <body className={`${lexend.variable} ${lineSeedTH.variable} antialiased`}>
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>
     </html>
