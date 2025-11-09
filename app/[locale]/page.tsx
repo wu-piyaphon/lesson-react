@@ -1,6 +1,6 @@
 import { setRequestLocale } from "next-intl/server";
 import { use } from "react";
-import Header from "@/components/header";
+import HeaderSection from "@/sections/header/header-section";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -12,8 +12,10 @@ export default function Home({ params }: Props) {
   setRequestLocale(locale);
 
   return (
-    <main className="flex w-full flex-col">
-      <Header />
+    <main className="flex w-full flex-col overflow-hidden">
+      <HeaderSection />
+
+      <div className="h-screen"></div>
     </main>
   );
 }
