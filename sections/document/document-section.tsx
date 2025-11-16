@@ -1,6 +1,6 @@
 import Container from "@/components/container";
 
-export default function ContentSection() {
+export default function DocumentSection() {
   return (
     <Container className="relative flex w-full flex-row pt-0">
       <div className="hidden lg:block lg:flex-none">

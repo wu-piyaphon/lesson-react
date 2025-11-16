@@ -1,6 +1,6 @@
 import { setRequestLocale } from "next-intl/server";
 import { use } from "react";
-import ContentSection from "@/sections/content/content-section";
+import DocumentSection from "@/sections/document/document-section";
 import HeaderSection from "@/sections/header/header-section";
 
 type Props = {
@@ -16,7 +16,7 @@ export default function Home({ params }: Props) {
     <main className="flex w-full flex-col">
       <HeaderSection />
 
-      <ContentSection />
+      <DocumentSection />
     </main>
   );
 }
