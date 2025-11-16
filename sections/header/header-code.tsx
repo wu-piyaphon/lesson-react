@@ -3,10 +3,10 @@ import HeaderLine from "./header-line";
 
 export default function HeaderCode() {
   return (
-    <div className="relative flex items-center justify-center">
+    <div className="relative flex items-center justify-center xl:pl-10">
       <HeaderLine />
 
-      <div className="relative w-full md:w-4/5">
+      <div className="relative w-full">
         <div className="absolute inset-0 rounded-2xl bg-linear-to-tr from-sky-300 via-sky-300/70 to-blue-300 opacity-10 blur-lg" />
         <div className="absolute inset-0 rounded-2xl bg-linear-to-tr from-sky-300 via-sky-300/70 to-blue-300 opacity-10" />
         <div className="-top-px absolute right-11 left-20 h-px bg-linear-to-r from-sky-300/0 via-sky-300/70 to-sky-300/0" />
