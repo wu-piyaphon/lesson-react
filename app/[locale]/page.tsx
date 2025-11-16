@@ -1,6 +1,11 @@
 import { setRequestLocale } from "next-intl/server";
 import { use } from "react";
-import DocumentSection from "@/sections/document/document-section";
+import Container from "@/components/container";
+import {
+  DocumentContent,
+  DocumentNavBookmark,
+  DocumentNavPage,
+} from "@/components/document";
 import HeaderSection from "@/sections/header/header-section";
 
 type Props = {
@@ -13,10 +18,19 @@ export default function Home({ params }: Props) {
   setRequestLocale(locale);
 
   return (
-    <main className="flex w-full flex-col">
+    <>
       <HeaderSection />
 
-      <DocumentSection />
-    </main>
+      <Container className="relative flex w-full flex-row pt-0">
+        <DocumentNavPage />
+        <DocumentContent>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
+          molestiae suscipit? Ullam sequi hic voluptate illum praesentium et
+          veniam fugit nisi eveniet! Quas blanditiis, quam quis accusamus dicta
+          molestias fuga.
+        </DocumentContent>
+        <DocumentNavBookmark />
+      </Container>
+    </>
   );
 }

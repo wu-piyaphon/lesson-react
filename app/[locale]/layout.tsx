@@ -75,7 +75,9 @@ export default async function RootLayout({ children, params }: Props) {
   return (
     <html lang="en" data-theme="night" data-theme-mode="dark">
       <body className={`${lexend.variable} ${lineSeedTH.variable} antialiased`}>
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <div className="flex w-full flex-col">
+          <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        </div>
       </body>
     </html>
   );
