@@ -1,16 +1,16 @@
 export default function HeaderLine() {
   return (
-    <div className="-top-32 -bottom-48 mask-[linear-gradient(transparent,white,white)] lg:-top-74 lg:-bottom-80 lg:mask-none dark:mask-[linear-gradient(transparent,white,transparent)] lg:dark:mask-[linear-gradient(white,white,transparent)] absolute inset-x-[-50vw] lg:left-[26%]">
+    <div className="-top-32 -bottom-48 mask-[linear-gradient(transparent,white,white)] lg:-top-32 lg:-bottom-32 lg:mask-none dark:mask-[linear-gradient(transparent,white,transparent)] lg:dark:mask-[linear-gradient(white,white,transparent)] absolute inset-x-[-50vw] lg:right-0 lg:left-[calc(50%+14rem)]">
       <svg
         aria-hidden="true"
         viewBox="0 0 668 1069"
         width="668"
         height="1069"
         fill="none"
-        className="-translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2 w-[668px] lg:left-0 lg:translate-x-0 lg:translate-y-[-60%]"
+        className="-translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2 lg:left-0 lg:translate-x-0 lg:translate-y-[-60%]"
       >
         <defs>
-          <clipPath id="_R_6lb_-clip-path">
+          <clipPath id="_r_9_-clip-path">
             <path
               fill="#fff"
               transform="rotate(-180 334 534.4)"
@@ -18,7 +18,7 @@ export default function HeaderLine() {
             ></path>
           </clipPath>
         </defs>
-        <g opacity=".4" clipPath="url(#_R_6lb_-clip-path)" strokeWidth="4">
+        <g opacity=".4" clipPath="url(#_r_9_-clip-path)" strokeWidth="4">
           <path
             opacity=".3"
             d="M584.5 770.4v-474M484.5 770.4v-474M384.5 770.4v-474M283.5 769.4v-474M183.5 768.4v-474M83.5 767.4v-474"

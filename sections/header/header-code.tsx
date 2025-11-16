@@ -3,7 +3,7 @@ import HeaderLine from "./header-line";
 
 export default function HeaderCode() {
   return (
-    <div className="relative flex items-center justify-center xl:pl-10">
+    <div className="relative lg:static xl:pl-10">
       <HeaderLine />
 
       <div className="relative w-full">
